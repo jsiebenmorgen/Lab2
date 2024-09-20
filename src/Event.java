@@ -15,10 +15,10 @@ public abstract class Event {
     LocalDateTime getDateTime(){
        return dateTime;
     }
-    // sets the dateTime.
-    //void setDateTime(dateTime){
-    //    this.dateTime = dateTime;
-    //}
+    //sets the dateTime.
+    void setDateTime(LocalDateTime dateTime){
+        this.dateTime = dateTime;
+    }
     // sets the name of the Event.
     void setName(String name) {
         this.name = name;
