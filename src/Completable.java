@@ -1,12 +1,8 @@
 public interface Completable {
 
 
-   /* void complete(){
-        System.out.println("Completable");
-    }
-    boolean isComplete(){
-        return true;
-    }
-*/
+    void complete();
+
+    boolean isComplete();
 
 }

@@ -3,9 +3,16 @@ import java.time.LocalDateTime;
 
 
 public class Meeting extends Event{
-    LocalDateTime endDateTime;   // the time the meeting is over.
-    String location; // represents the location of the event.
-    boolean complete;
+   private LocalDateTime endDateTime;   // the time the meeting is over.
+   private String location; // represents the location of the event.
+   private boolean complete;
+
+    public Meeting(String name, LocalDateTime start, LocalDateTime end, String location) {
+        super(name, start);
+        this.endDateTime = end;
+        this.location = location;
+        this.complete = false;
+    }
 
     // sets the complete boolean to true;
     void complete(){
@@ -22,10 +29,10 @@ public class Meeting extends Event{
         return endDateTime;
     }
     // returns the duration of the meeting, (dateTime – endDateTime)
-    int getDuration() {
+    Duration getDuration() {
 
-        Duration.between(getDateTime(), getEndTime());
-        return 0;
+
+        return  Duration.between(getDateTime(), getEndTime());
 
     }
 
@@ -44,4 +51,14 @@ public class Meeting extends Event{
         this.location = location;
     }
 
+    @Override
+    String getName() {
+        return super.name;
+    }
+
+
+
+    public Object getEndDateTime() {
+        return endDateTime;
+    }
 }

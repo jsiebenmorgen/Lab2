@@ -1,16 +1,19 @@
 import java.time.LocalDateTime;
 
-public abstract class Event {
+public abstract class Event implements Comparable<Event> {
 
-    //implements Comparable<Event>;
 
-     String name;  // Name of the event.
-     LocalDateTime dateTime; // the time and date the event starts.
 
-    // abstract method that returns the name
-    String getName(){
-        return name;
+     public String name;  // Name of the event.
+     public LocalDateTime dateTime; // the time and date the event starts.
+
+    public Event(String name, LocalDateTime dateTime) {
+        this.name = name;
+        this.dateTime = dateTime;
     }
+    // abstract method that returns the name
+     abstract String getName();
+
     // method that returns the dateTime.
     LocalDateTime getDateTime(){
        return dateTime;
@@ -23,7 +26,19 @@ public abstract class Event {
     void setName(String name) {
         this.name = name;
     }
-   // compareTo(Event e): int  // compares the date of this Event to the incoming event and returns a positive int if this event comes later, a negative int if this event comes before, and 0 if the two have the same dateTime.
+
+    // compares the date of this Event to the incoming event and returns a positive int if this event comes later,
+    // a negative int if this event comes before, and 0 if the two have the same dateTime.
+    @Override
+    public int compareTo(Event e){
+
+        return this.dateTime.compareTo(e.getDateTime());
+
+    }
 
 
+    //public void setEndDateTime(LocalDateTime localDateTime) {
+      //   this.dateTime = localDateTime;
+
+    //}
 }
