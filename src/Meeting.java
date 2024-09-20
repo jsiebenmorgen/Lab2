@@ -1,6 +1,6 @@
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.Date;
+
 
 public class Meeting extends Event{
     LocalDateTime endDateTime;   // the time the meeting is over.
