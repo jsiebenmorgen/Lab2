@@ -15,50 +15,49 @@ public class Meeting extends Event{
     }
 
     // sets the complete boolean to true;
-    void complete(){
+    public void complete(){
         complete = true;
     }
 
     // returns the complete boolean.
-    boolean isComplete(){
+    public boolean isComplete(){
         return complete;
     }
 
     // returns the endDateTime
-    LocalDateTime getEndTime(){
+    public LocalDateTime getEndTime(){
         return endDateTime;
     }
     // returns the duration of the meeting, (dateTime – endDateTime)
-    Duration getDuration() {
-
+    public Duration getDuration() {
 
         return  Duration.between(getDateTime(), getEndTime());
 
     }
 
     // returns the location of the meeting.
-    String getLocation(){
+    public String getLocation(){
         return location;
     }
 
     // sets the end of the meeting.
-    void setEndTime(LocalDateTime end) {
-        endDateTime = end;
+    public void setEndTime(LocalDateTime end) {
+        this.endDateTime = end;
     }
 
     // sets the location of the meeting.
-    void setLocation(String location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
     @Override
-    String getName() {
+   String getName() {
         return super.name;
     }
 
 
 
-    public Object getEndDateTime() {
-        return endDateTime;
-    }
+ //   public Object getEndDateTime() {
+ //       return endDateTime;
+ //   }
 }
