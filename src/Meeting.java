@@ -50,6 +50,7 @@ public class Meeting extends Event{
         this.location = location;
     }
 
+
     @Override
    String getName() {
         return super.name;
@@ -57,7 +58,4 @@ public class Meeting extends Event{
 
 
 
- //   public Object getEndDateTime() {
- //       return endDateTime;
- //   }
 }

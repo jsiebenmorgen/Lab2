@@ -29,7 +29,7 @@ public abstract class Event implements Comparable<Event> {
 
     // compares the date of this Event to the incoming event and returns a positive int if this event comes later,
     // a negative int if this event comes before, and 0 if the two have the same dateTime.
-    @Override
+   // @Override
     public int compareTo(Event e){
 
         return this.dateTime.compareTo(e.getDateTime());
@@ -37,8 +37,4 @@ public abstract class Event implements Comparable<Event> {
     }
 
 
-    //public void setEndDateTime(LocalDateTime localDateTime) {
-      //   this.dateTime = localDateTime;
-
-    //}
 }
