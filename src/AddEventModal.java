@@ -28,12 +28,14 @@ public class AddEventModal extends JDialog {
                     eventListPanel.addEvent(new Deadline(nameField.getText(), parsedDate));
                     dispose();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(AddEventModal.this, "Invalid date format.", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(AddEventModal.this,
+                            "Invalid date format.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
 
-        setSize(300, 200);
+        setSize(400, 100);
         setLocationRelativeTo(parent);
     }
 }
