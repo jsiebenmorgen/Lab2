@@ -24,18 +24,12 @@ public class EventPlanner  {
 
         frame.pack();
         frame.setVisible(true);
-
-
     }
-
 
     static void addDefaultEvents(EventListPanel eventListPanel) {
 
         eventListPanel.addEvent(new Deadline("Lab2 is Due", LocalDateTime.now()));
-
         eventListPanel.addEvent(new Meeting("Monday Meeting", LocalDateTime.now(), LocalDateTime.now().plusHours(2), "Virtual"));
-
-
 
     }
 
